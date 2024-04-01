@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('background.jpg'); /* Replace 'background.jpg' with your background image file */
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.icon {
+  width: 100px; /* Adjust icon size as needed */
+  height: 100px; /* Adjust icon size as needed */
+  background-image: url('Untitled.png'); /* Replace 'icon.png' with your icon image file */
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+}
+
+.form {
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust background opacity as needed */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.7); /* Adjust background opacity as needed */
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="icon"></div>
+  <form class="form" action="login.php" method="post" onsubmit="return validateForm()">
+    <input type="text" id="username" name="username" placeholder="Username" required><br>
+    <input type="password" id="password" name="password" placeholder="Password" required><br>
+    <input type="submit" value="Login">
+  </form>
+</div>
+
+<script>
+  function validateForm() {
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+
+  // Perform validation
+  if (username === "Abdelhalim_Hassan" && password === "ABD_H") {
+    alert("Welcome, admin Abdelhalim_Hassan!");
+    return true; // Allow form submission
+  } else if (username === "Amr_Khaled" && password === "A_KH") {
+    alert("Welcome, admin Amr_Khaled!");
+    return true; // Allow form submission
+  } else {
+    alert("Invalid username or password");
+    return false; // Prevent form submission
+  }
+}
+</script>
+
+</body>
+</html>
